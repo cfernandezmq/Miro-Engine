@@ -4,6 +4,9 @@
     <Filter Include="Miro">
       <UniqueIdentifier>{7C16897C-684D-8A0D-113A-7010FD4F060F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Miro\Events">
+      <UniqueIdentifier>{E01E0DCC-4CD4-85C1-D5C8-7F98417D7CC5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Miro.h" />
@@ -16,13 +19,21 @@
     <ClInclude Include="src\Miro\EntryPoint.h">
       <Filter>Miro</Filter>
     </ClInclude>
+    <ClInclude Include="src\Miro\Events\ApplicationEvent.h">
+      <Filter>Miro\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Miro\Events\Event.h">
+      <Filter>Miro\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Miro\Events\KeyEvent.h">
+      <Filter>Miro\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Miro\Events\MouseEvent.h">
+      <Filter>Miro\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Miro\Log.h">
       <Filter>Miro</Filter>
     </ClInclude>
-    <ClInclude Include="src\Miro\Events\Event.h" />
-    <ClInclude Include="src\Miro\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Miro\Events\KeyEvent.h" />
-    <ClInclude Include="src\Miro\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Miro\Application.cpp">
