@@ -9,3 +9,6 @@
 #else
 	#error Miro only supports Windows!
 #endif // MR_PLATFORM_WINDOWS
+
+
+#define BIT(x) (1 << x)
