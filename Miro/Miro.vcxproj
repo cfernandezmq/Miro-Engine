@@ -144,6 +144,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Miro\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Miro.h" />
     <ClInclude Include="src\Miro\Application.h" />
     <ClInclude Include="src\Miro\Core.h" />
@@ -155,15 +156,18 @@
     <ClInclude Include="src\Miro\Layer.h" />
     <ClInclude Include="src\Miro\LayerStack.h" />
     <ClInclude Include="src\Miro\Log.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Miro\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Miro\Application.cpp" />
     <ClCompile Include="src\Miro\Layer.cpp" />
     <ClCompile Include="src\Miro\LayerStack.cpp" />
     <ClCompile Include="src\Miro\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

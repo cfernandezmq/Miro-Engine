@@ -51,6 +51,8 @@
     </ClInclude>
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\Miro\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Miro\Application.cpp">
@@ -69,5 +71,7 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\stdafx.cpp" />
+    <ClCompile Include="src\Miro\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>

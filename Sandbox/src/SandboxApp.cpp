@@ -22,6 +22,7 @@ public:
 	Sandbox() 
 	{
 		PushLayer(new ExampleLayer());
+		PushLayer(new Miro::ImGuiLayer());
 	}
 
 
