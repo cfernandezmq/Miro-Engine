@@ -14,10 +14,14 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Miro/vendor/GLFW/include"
 IncludeDir["Glad"] = "Miro/vendor/Glad/include"
+IncludeDir["ImGui"] = "Miro/vendor/ImGui"
+
 
 
 include "Miro/vendor/GLFW"
 include "Miro/vendor/Glad"
+include "Miro/vendor/ImGui"
+
 
 
 project "Miro"
@@ -43,7 +47,8 @@ project "Miro"
         "Miro/src",
         "Miro/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}"
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.ImGui}"
 
     }
 
@@ -51,6 +56,7 @@ project "Miro"
     {
         "GLFW",
         "Glad",
+        "ImGui",
         "opengl32.lib"
     }
 
