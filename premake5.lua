@@ -8,15 +8,21 @@ workspace "Miro"
         "Dist"
     }
 
-ouputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+-- Include directories relative to root folder ( solution directory )
+IncludeDir = {}
+IncludeDir["GLFW"] = "Miro/vendor/GLFW/include"
+
+include "Miro/vendor/GLFW"
 
 project "Miro"
     location "Miro"
     kind "SharedLib"
     language "C++"
 
-    targetdir ("bin/".. ouputdir .. "/%{prj.name}")
-    objdir ("bin-int/".. ouputdir .. "/%{prj.name}")
+    targetdir ("bin/".. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/".. outputdir .. "/%{prj.name}")
     
     pchheader "stdafx.h"
     pchsource "Miro/src/stdafx.cpp"
@@ -30,7 +36,14 @@ project "Miro"
 
     includedirs
     {
-        "Miro/vendor/spdlog/include"
+        "Miro/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
@@ -46,7 +59,7 @@ project "Miro"
 
         postbuildcommands
         {
-            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. ouputdir .. "/Sandbox")
+            ("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
         }
 
     filter "configurations:Debug"
@@ -67,8 +80,8 @@ project "Sandbox"
     kind "ConsoleApp"
     language "C++"
 
-    targetdir ("bin/".. ouputdir .. "/%{prj.name}")
-    objdir ("bin-int/".. ouputdir .. "/%{prj.name}")
+    targetdir ("bin/".. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/".. outputdir .. "/%{prj.name}")
     
     files
     {

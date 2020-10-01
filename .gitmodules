@@ -1,3 +1,6 @@
 [submodule "Miro/vendor/spdlog"]
 	path = Miro/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Miro/vendor/GLFW"]
+	path = Miro/vendor/GLFW
+	url = https://github.com/cfernandezmq/glfw

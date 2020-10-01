@@ -5,15 +5,22 @@
 #include "Events/ApplicationEvent.h"
 #include "Log.h"
 
+
 namespace Miro
 {
 
+	Application::Application()
+	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
+	}
+
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		MR_TRACE(e);
+		while (m_Running)
+		{
 
-		while (true);
+			m_Window->OnUpdate();
+		}
 	}
 
 }

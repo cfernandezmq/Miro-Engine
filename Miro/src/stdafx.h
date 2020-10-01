@@ -13,6 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Miro/Log.h"
 
 #ifdef MR_PLATFORM_WINDOWS
 	#include <Windows.h>
