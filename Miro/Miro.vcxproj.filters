@@ -7,6 +7,12 @@
     <Filter Include="Miro\Events">
       <UniqueIdentifier>{E01E0DCC-4CD4-85C1-D5C8-7F98417D7CC5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Miro.h" />
@@ -31,21 +37,37 @@
     <ClInclude Include="src\Miro\Events\MouseEvent.h">
       <Filter>Miro\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Miro\Layer.h">
+      <Filter>Miro</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Miro\LayerStack.h">
+      <Filter>Miro</Filter>
+    </ClInclude>
     <ClInclude Include="src\Miro\Log.h">
       <Filter>Miro</Filter>
     </ClInclude>
-    <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Miro\Application.cpp">
       <Filter>Miro</Filter>
     </ClCompile>
+    <ClCompile Include="src\Miro\Layer.cpp">
+      <Filter>Miro</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Miro\LayerStack.cpp">
+      <Filter>Miro</Filter>
+    </ClCompile>
     <ClCompile Include="src\Miro\Log.cpp">
       <Filter>Miro</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\stdafx.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

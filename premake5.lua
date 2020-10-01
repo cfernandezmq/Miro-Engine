@@ -36,6 +36,7 @@ project "Miro"
 
     includedirs
     {
+        "Miro/src",
         "Miro/vendor/spdlog/include",
         "%{IncludeDir.GLFW}"
     }
@@ -64,14 +65,17 @@ project "Miro"
 
     filter "configurations:Debug"
         defines "MR_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
         
     filter "configurations:Release"
-    defines "MR_RELEASE"
-    symbols "On"
+        defines "MR_RELEASE"
+        buildoptions "/MD"
+        symbols "On"
     
     filter "configurations:Dist"
         defines "MR_DIST"
+        buildoptions "/MD"
         symbols "On"
 
 
@@ -114,12 +118,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "MR_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
         
     filter "configurations:Release"
     defines "MR_RELEASE"
+    buildoptions "/MD"
     symbols "On"
     
     filter "configurations:Dist"
         defines "MR_DIST"
+        buildoptions "/MD"
         symbols "On"
