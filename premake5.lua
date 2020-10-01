@@ -13,8 +13,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder ( solution directory )
 IncludeDir = {}
 IncludeDir["GLFW"] = "Miro/vendor/GLFW/include"
+IncludeDir["Glad"] = "Miro/vendor/Glad/include"
+
 
 include "Miro/vendor/GLFW"
+include "Miro/vendor/Glad"
+
 
 project "Miro"
     location "Miro"
@@ -38,12 +42,15 @@ project "Miro"
     {
         "Miro/src",
         "Miro/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
+
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -56,6 +63,7 @@ project "Miro"
         {
             "MR_PLATFORM_WINDOWS",
             "MR_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands

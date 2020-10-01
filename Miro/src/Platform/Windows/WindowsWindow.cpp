@@ -5,6 +5,8 @@
 #include "Miro/Events/MouseEvent.h"
 #include "Miro/Events/KeyEvent.h"
 
+#include "glad/glad.h"
+
 namespace Miro
 {
 	static bool s_GLFWInitialized = false;
@@ -70,6 +72,8 @@ namespace Miro
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		MR_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
