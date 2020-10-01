@@ -144,10 +144,12 @@
     <ClInclude Include="src\Miro\Events\KeyEvent.h" />
     <ClInclude Include="src\Miro\Events\MouseEvent.h" />
     <ClInclude Include="src\Miro\Log.h" />
+    <ClInclude Include="src\stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Miro\Application.cpp" />
     <ClCompile Include="src\Miro\Log.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
