@@ -18,6 +18,9 @@ project "Miro"
     targetdir ("bin/".. ouputdir .. "/%{prj.name}")
     objdir ("bin-int/".. ouputdir .. "/%{prj.name}")
     
+    pchheader "stdafx.h"
+    pchsource "Miro/src/stdafx.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

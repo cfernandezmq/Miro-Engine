@@ -1,7 +1,8 @@
 #pragma once
+#include "stdafx.h"
 
 #include "Event.h"
-#include <sstream>
+
 
 namespace Miro
 {
