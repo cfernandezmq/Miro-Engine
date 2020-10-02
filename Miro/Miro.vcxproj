@@ -154,9 +154,11 @@
     <ClInclude Include="src\Miro\Events\KeyEvent.h" />
     <ClInclude Include="src\Miro\Events\MouseEvent.h" />
     <ClInclude Include="src\Miro\Input.h" />
+    <ClInclude Include="src\Miro\KeyCodes.h" />
     <ClInclude Include="src\Miro\Layer.h" />
     <ClInclude Include="src\Miro\LayerStack.h" />
     <ClInclude Include="src\Miro\Log.h" />
+    <ClInclude Include="src\Miro\MouseButtonCodes.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Window.h" />
