@@ -2,6 +2,8 @@
 
 #include "Window.h"
 
+#include "Miro/Renderer/GraphicsContext.h"
+
 #include <GLFW/glfw3.h>
 
 namespace Miro
@@ -31,6 +33,8 @@ namespace Miro
 
 	private:
 		GLFWwindow* m_Window;
+
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{
