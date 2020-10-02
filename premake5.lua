@@ -108,7 +108,7 @@ project "Sandbox"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
 
     }
 
@@ -116,6 +116,7 @@ project "Sandbox"
     {
         "Miro/vendor/spdlog/include",
         "Miro/src",
+        "Miro/vendor",
         "%{IncludeDir.glm}"
 
     }

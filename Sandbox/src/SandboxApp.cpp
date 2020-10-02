@@ -1,5 +1,6 @@
 #include <Miro.h>
 
+#include "ImGui/imgui.h"
 
 class ExampleLayer : public Miro::Layer
 {
@@ -17,6 +18,13 @@ public:
 		{
 			MR_INFO("TAB KEY IS PRESSED!");
 		}
+	}
+
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello world");
+		ImGui::End();
 	}
 
 	void OnEvent(Miro::Event& event) override
@@ -41,7 +49,6 @@ public:
 	Sandbox() 
 	{
 		PushLayer(new ExampleLayer());
-		PushLayer(new Miro::ImGuiLayer());
 	}
 
 
