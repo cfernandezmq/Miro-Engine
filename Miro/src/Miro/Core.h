@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef MR_PLATFORM_WINDOWS
+#if MR_DYNAMIC_LINK
 	#ifdef MR_BUILD_DLL
 		#define MIRO_API __declspec(dllexport)
 	#else
 		#define MIRO_API __declspec(dllimport)
 	#endif
+#else
+	#define MIRO_API
+#endif
 #else
 	#error Miro only supports Windows!
 #endif // MR_PLATFORM_WINDOWS
