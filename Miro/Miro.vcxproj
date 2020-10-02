@@ -153,6 +153,7 @@
     <ClInclude Include="src\Miro\Events\Event.h" />
     <ClInclude Include="src\Miro\Events\KeyEvent.h" />
     <ClInclude Include="src\Miro\Events\MouseEvent.h" />
+    <ClInclude Include="src\Miro\Input.h" />
     <ClInclude Include="src\Miro\Layer.h" />
     <ClInclude Include="src\Miro\LayerStack.h" />
     <ClInclude Include="src\Miro\Log.h" />
@@ -160,6 +161,7 @@
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\stdafx.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Miro\ImGui\ImGuiLayer.cpp" />
@@ -172,6 +174,7 @@
     <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
