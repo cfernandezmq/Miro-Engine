@@ -24,6 +24,12 @@ namespace Miro
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		MR_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		MR_CORE_INFO("OpenGL Renderer:");
+		MR_CORE_INFO("  Vendor: {0}", glGetString(GL_VENDOR));
+		MR_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
+		MR_CORE_INFO("  Version: {0}", glGetString(GL_VERSION));
+
 	}
 
 }
