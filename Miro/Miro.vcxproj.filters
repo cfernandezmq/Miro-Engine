@@ -7,8 +7,14 @@
     <Filter Include="Miro\Events">
       <UniqueIdentifier>{E01E0DCC-4CD4-85C1-D5C8-7F98417D7CC5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Miro\ImGui">
+      <UniqueIdentifier>{A678BF3C-9230-018A-FB37-DAE5E70E9C7A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
     </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
@@ -37,6 +43,15 @@
     <ClInclude Include="src\Miro\Events\MouseEvent.h">
       <Filter>Miro\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Miro\ImGui\ImGuiLayer.h">
+      <Filter>Miro\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Miro\Input.h">
+      <Filter>Miro</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Miro\KeyCodes.h">
+      <Filter>Miro</Filter>
+    </ClInclude>
     <ClInclude Include="src\Miro\Layer.h">
       <Filter>Miro</Filter>
     </ClInclude>
@@ -46,21 +61,27 @@
     <ClInclude Include="src\Miro\Log.h">
       <Filter>Miro</Filter>
     </ClInclude>
+    <ClInclude Include="src\Miro\MouseButtonCodes.h">
+      <Filter>Miro</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\Window.h" />
     <ClInclude Include="src\stdafx.h" />
-    <ClInclude Include="src\Miro\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
-    <ClInclude Include="src\Miro\Input.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
-    <ClInclude Include="src\Miro\KeyCodes.h" />
-    <ClInclude Include="src\Miro\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Miro\Application.cpp">
       <Filter>Miro</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Miro\ImGui\ImGuiLayer.cpp">
+      <Filter>Miro\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Miro\Layer.cpp">
       <Filter>Miro</Filter>
@@ -71,12 +92,15 @@
     <ClCompile Include="src\Miro\Log.cpp">
       <Filter>Miro</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\stdafx.cpp" />
-    <ClCompile Include="src\Miro\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

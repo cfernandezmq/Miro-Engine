@@ -1,9 +1,13 @@
 #include <Miro.h>
 
+
 class ExampleLayer : public Miro::Layer
 {
 public:
-	ExampleLayer() : Layer("Example") {}
+	ExampleLayer() : Layer("Example") 
+	{
+
+	}
 
 	void OnUpdate() override
 	{

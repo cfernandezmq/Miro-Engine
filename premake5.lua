@@ -15,6 +15,8 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Miro/vendor/GLFW/include"
 IncludeDir["Glad"] = "Miro/vendor/Glad/include"
 IncludeDir["ImGui"] = "Miro/vendor/ImGui"
+IncludeDir["glm"] = "Miro/vendor/glm"
+
 
 
 
@@ -48,7 +50,9 @@ project "Miro"
         "Miro/vendor/spdlog/include",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.Glad}",
-        "%{IncludeDir.ImGui}"
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.glm}"
+
 
     }
 
@@ -111,7 +115,9 @@ project "Sandbox"
     includedirs
     {
         "Miro/vendor/spdlog/include",
-        "Miro/src"
+        "Miro/src",
+        "%{IncludeDir.glm}"
+
     }
 
     links

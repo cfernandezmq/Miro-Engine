@@ -7,3 +7,6 @@
 [submodule "Miro/vendor/imgui"]
 	path = Miro/vendor/imgui
 	url = https://github.com/cfernandezmq/imgui
+[submodule "Miro/vendor/glm"]
+	path = Miro/vendor/glm
+	url = https://github.com/cfernandezmq/glm
